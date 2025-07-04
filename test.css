@@ -415,8 +415,8 @@ body {
 }
 
 .popup-img {
-  min-height: 100%;
-  width: 100px;
+  min-height: 260px;
+  width: 100%;
   object-fit: cover;
   border-radius: 18px;
 }
