@@ -28,10 +28,33 @@
       </a>
       <nav>
         <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#presentation">Présentation</a></li>
-          <li><a href="#mes-competences">Compétences</a></li>
-          <li><a href="#projets">Projets</a></li>
+          <script>
+            isLoggedIn = 'projets'
+
+            if (isLoggedIn = 'index') {
+              document.getElementById("message").innerHTML = "<li><a href='#'>Accueil</a></li>";
+            } else {
+              document.getElementById("message").innerHTML = "<li><a href='Projects.html'>Accueil</a></li>";
+            }
+
+            if (isLoggedIn = 'presentation') {
+              document.getElementById("message").innerHTML = "<li><a href='#'>Présentation</a></li>";
+            } else {
+              document.getElementById("message").innerHTML = "<li><a href='Presentation.html'>Présentation</a></li>";
+            }
+
+            if (isLoggedIn = 'competences') {
+              document.getElementById("message").innerHTML = "<li><a href='#'>Compétences</a></li>";
+            } else {
+              document.getElementById("message").innerHTML = "<li><a href='Competences.html'>Compétences</a></li>";
+            }
+
+            if (isLoggedIn = 'projets') {
+              document.getElementById("message").innerHTML = "<li><a href='#'>Projets</a></li>";
+            } else {
+              document.getElementById("message").innerHTML = "<li><a href='Projects.html'>Projets</a></li>";
+            }
+          </script>
         </ul>
       </nav>
     </div>

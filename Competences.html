@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<!-- Scroll to top button -->
+<div class="dialogue" aria-label="Remonter en haut">
+    <a class="top-page" href="#accueil" aria-label="Retour en haut de page">
+        <svg fill="#00ffd0" height="48px" width="48px" viewBox="-108.9 -108.9 547.80 547.80" xmlns="http://www.w3.org/2000/svg" stroke="#00ffd0" stroke-width="33">
+            <path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+                l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+                C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+        </svg>
+    </a>
+</div>
+
+<!-- NAVBAR -->
+<header>
+    <div class="navbar">
+        <div class="container">
+            <a href="#" class="site-logo" aria-label="Accueil">
+                <img src="ChatGPT Image 16 juin 2025, 16_31_46.png" alt="Logo du site">
+            </a>
+            <nav>
+                <ul>
+                    <script>
+                        isLoggedIn = 'index'
+
+                        if (isLoggedIn = 'index') {
+                            document.getElementById("message").innerHTML = "<li><a href='#'>Accueil</a></li>";
+                        } else {
+                            document.getElementById("message").innerHTML = "<li><a href='Projects.html'>Accueil</a></li>";
+                        }
+
+                        if (isLoggedIn = 'presentation') {
+                            document.getElementById("message").innerHTML = "<li><a href='#presentation'>Présentation</a></li>";
+                        } else {
+                            document.getElementById("message").innerHTML = "<li><a href='Presentation.html'>Présentation</a></li>";
+                        }
+
+                        if (isLoggedIn = 'competences') {
+                            document.getElementById("message").innerHTML = "<li><a href='#competences'>Compétences</a></li>";
+                        } else {
+                            document.getElementById("message").innerHTML = "<li><a href='Competences.html'>Compétences</a></li>";
+                        }
+
+                        if (isLoggedIn = 'projets') {
+                            document.getElementById("message").innerHTML = "<li><a href='#projets'>Projets</a></li>";
+                        } else {
+                            document.getElementById("message").innerHTML = "<li><a href='Projects.html'>Projets</a></li>";
+                        }
+                    </script>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- FIN NAVBAR -->
