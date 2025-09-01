@@ -188,17 +188,26 @@ body {
     padding: 4.5rem 0 3.5rem 0;
 }
 
-#presentation .container::before {
-    transition: clip-path 0.3s ease-in-out;
+#presentation .container {
+    position: relative;
+    z-index: 1;
+    /* autres styles */
 }
 
-#presentation .container:hover::before {
+#presentation .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--border-color, black); /* ou ce que tu veux */
     clip-path: polygon(
             0% 0%,
-            100% 0%,
+            92% 0%,
+            100% 12%,
             100% 100%,
-            0% 100%
+            8% 100%,
+            0% 88%
     );
+    z-index: -1;
 }
 
 #presentation img {
