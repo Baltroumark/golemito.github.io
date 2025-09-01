@@ -27,8 +27,11 @@
         <img src="ChatGPT Image 16 juin 2025, 16_31_46.png" alt="Logo du site">
       </a>
       <nav>
-        <ul id="message">
-          <!-- Les liens seront injectés par JavaScript -->
+        <ul>
+          <li><a href='index.html'>Accueil</a></li>
+          <li><a href='Presentation.html'>Présentation</a></li>
+          <li><a href='Competences.html'>Compétences</a></li>
+          <li><a href='#'>Projets</a></li>
         </ul>
       </nav>
     </div>
@@ -38,27 +41,5 @@
 
 <!-- ACCUEIL SECTION -->
 <section id="accueil" class="site-header">
-  <h1>Projets</h1>
+  <h1>Compétences</h1>
 </section>
-
-<script>
-  const isLoggedIn = 'projets'; // À adapter dynamiquement selon la page
-
-  const navItems = [
-    { id: 'index', label: 'Accueil', href: 'index.html' },
-    { id: 'presentation', label: 'Présentation', href: 'Presentation.html' },
-    { id: 'competences', label: 'Compétences', href: 'Competences.html' },
-    { id: 'projets', label: 'Projets', href: 'Projects.html' }
-  ];
-
-  const ul = document.getElementById("message");
-
-  navItems.forEach(item => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${isLoggedIn === item.id ? '#' : item.href}">${item.label}</a>`;
-    ul.appendChild(li);
-  });
-</script>
-
-</body>
-</html>
