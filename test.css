@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
-/* Variables couleurs geek */
 :root {
     --background: #181c24;
     --surface: #23283a;
@@ -28,7 +27,6 @@ body {
     color: var(--text);
 }
 
-/* --- NAVBAR --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -116,7 +114,6 @@ body {
     top: 90%;
 }
 
-/* --- HERO / HEADER --- */
 .site-header {
     position: relative;
     display: flex;
@@ -154,7 +151,6 @@ body {
     z-index: 1;
 }
 
-/* --- DIALOGUE (Scroll top) --- */
 .dialogue {
     position: fixed;
     bottom: 24px;
@@ -180,7 +176,6 @@ body {
     height: 48px;
 }
 
-/* --- CONTAINER --- */
 .container {
     width: 92%;
     max-width: 1100px;
@@ -189,7 +184,6 @@ body {
     box-sizing: border-box;
 }
 
-/* --- SECTIONS --- */
 .site-main > section {
     padding: 4.5rem 0 3.5rem 0;
 }
@@ -270,7 +264,6 @@ body {
     box-shadow: 0 0 16px 2px var(--primary);
 }
 
-/* --- COMPETENCES --- */
 .bg-light {
     background: var(--surface);
     border-radius: var(--radius);
@@ -324,7 +317,7 @@ body {
 }
 
 .card:hover img {
-    transform: scale(1.16) rotate(-4deg);
+    transform: scale(1.16) ;
 }
 
 .h3 {
@@ -334,7 +327,6 @@ body {
     margin: 0.6rem 0 0 0;
 }
 
-/* --- CARDS (Actualités) --- */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -388,7 +380,6 @@ body {
     line-height: 1.5;
 }
 
-/* --- POPUP --- */
 .popup-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -415,8 +406,8 @@ body {
 }
 
 .popup-img {
-  min-height: 260px;
-  width: 100%;
+  min-height: 100%;
+  width: 260px;
   object-fit: cover;
   border-radius: 18px;
 }
@@ -453,7 +444,6 @@ body {
   color: var(--accent, #ff00ea);
 }
 
-/* --- FOOTER --- */
 footer {
     background: #161922;
     color: var(--text-secondary);
@@ -491,7 +481,6 @@ footer p {
     color: var(--text-secondary);
 }
 
-/* --- RESPONSIVE --- */
 @media screen and (max-width: 1200px) {
     .container,
     .cards-container {
