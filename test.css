@@ -198,8 +198,8 @@ body {
             95% 0%,       /* haut droit (début du biseau) */
             100% 15%,     /* coin supérieur droit biseauté */
             100% 100%,    /* bas droit */
-            15% 100%,     /* bas gauche (début du biseau) */
-            0% 95%        /* coin inférieur gauche biseauté */
+            5% 100%,     /* bas gauche (début du biseau) */
+            0% 85%        /* coin inférieur gauche biseauté */
     );
     box-shadow: var(--shadow);
     padding: 2.5rem 2rem;
