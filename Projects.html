@@ -27,34 +27,8 @@
         <img src="ChatGPT Image 16 juin 2025, 16_31_46.png" alt="Logo du site">
       </a>
       <nav>
-        <ul>
-          <script>
-            const isLoggedIn = 'projets';
-
-            if (isLoggedIn === 'index') {
-              document.getElementById("message").innerHTML = "<li><a href='#'>Accueil</a></li>";
-            } else {
-              document.getElementById("message").innerHTML = "<li><a href='Projects.html'>Accueil</a></li>";
-            }
-
-            if (isLoggedIn === 'presentation') {
-              document.getElementById("message").innerHTML = "<li><a href='#'>Présentation</a></li>";
-            } else {
-              document.getElementById("message").innerHTML = "<li><a href='Presentation.html'>Présentation</a></li>";
-            }
-
-            if (isLoggedIn === 'competences') {
-              document.getElementById("message").innerHTML = "<li><a href='#'>Compétences</a></li>";
-            } else {
-              document.getElementById("message").innerHTML = "<li><a href='Competences.html'>Compétences</a></li>";
-            }
-
-            if (isLoggedIn === 'projets') {
-              document.getElementById("message").innerHTML = "<li><a href='#'>Projets</a></li>";
-            } else {
-              document.getElementById("message").innerHTML = "<li><a href='Projects.html'>Projets</a></li>";
-            }
-          </script>
+        <ul id="message">
+          <!-- Les liens seront injectés par JavaScript -->
         </ul>
       </nav>
     </div>
@@ -66,3 +40,25 @@
 <section id="accueil" class="site-header">
   <h1>Projets</h1>
 </section>
+
+<script>
+  const isLoggedIn = 'projets'; // À adapter dynamiquement selon la page
+
+  const navItems = [
+    { id: 'index', label: 'Accueil', href: 'index.html' },
+    { id: 'presentation', label: 'Présentation', href: 'Presentation.html' },
+    { id: 'competences', label: 'Compétences', href: 'Competences.html' },
+    { id: 'projets', label: 'Projets', href: 'Projects.html' }
+  ];
+
+  const ul = document.getElementById("message");
+
+  navItems.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${isLoggedIn === item.id ? '#' : item.href}">${item.label}</a>`;
+    ul.appendChild(li);
+  });
+</script>
+
+</body>
+</html>
