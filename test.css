@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
+/* Variables couleurs geek */
 :root {
-    --background: #2b353e;
-    --surface: #202020;
+    --background: #181c24;
+    --surface: #23283a;
     --surface-light: #2d3347;
     --primary: #00ffd0;
     --primary-dark: #00bfae;
@@ -27,6 +28,7 @@ body {
     color: var(--text);
 }
 
+/* --- NAVBAR --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -114,6 +116,7 @@ body {
     top: 90%;
 }
 
+/* --- HERO / HEADER --- */
 .site-header {
     position: relative;
     display: flex;
@@ -151,6 +154,7 @@ body {
     z-index: 1;
 }
 
+/* --- DIALOGUE (Scroll top) --- */
 .dialogue {
     position: fixed;
     bottom: 24px;
@@ -176,6 +180,7 @@ body {
     height: 48px;
 }
 
+/* --- CONTAINER --- */
 .container {
     width: 92%;
     max-width: 1100px;
@@ -184,30 +189,19 @@ body {
     box-sizing: border-box;
 }
 
+/* --- SECTIONS --- */
 .site-main > section {
     padding: 4.5rem 0 3.5rem 0;
 }
 
 #presentation .container {
-    position: relative;
-    z-index: 1;
-    /* autres styles */
-}
-
-#presentation .container::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--border-color, black); /* ou ce que tu veux */
-    clip-path: polygon(
-            0% 0%,
-            92% 0%,
-            100% 15.8%,
-            100% 100%,
-            8% 100%,
-            0% 88%
-    );
-    z-index: -1;
+    display: flex;
+    gap: 2.2rem;
+    align-items: center;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2rem;
 }
 
 #presentation img {
@@ -276,6 +270,7 @@ body {
     box-shadow: 0 0 16px 2px var(--primary);
 }
 
+/* --- COMPETENCES --- */
 .bg-light {
     background: var(--surface);
     border-radius: var(--radius);
@@ -329,7 +324,7 @@ body {
 }
 
 .card:hover img {
-    transform: scale(1.16) ;
+    transform: scale(1.16) rotate(-4deg);
 }
 
 .h3 {
@@ -339,6 +334,7 @@ body {
     margin: 0.6rem 0 0 0;
 }
 
+/* --- CARDS (Actualités) --- */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -392,70 +388,74 @@ body {
     line-height: 1.5;
 }
 
+/* --- POPUP --- */
 .popup-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(24,28,36,0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.2s;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(24,28,36,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.2s;
 }
 
 .popup-content {
-  background: var(--surface-light, #23283a);
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #00ffd088;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  max-width: 600px;
-  width: 94vw;
-  min-height: 260px;
-  position: relative;
-  overflow: hidden;
+    background: var(--surface-light, #23283a);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #00ffd088;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 600px;
+    width: 94vw;
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
 }
 
 .popup-img {
-  min-height: 100%;
-  width: 260px;
-  object-fit: cover;
-  border-radius: 18px;
+    min-height: 260px;
+    width: 100%;
+    min-height: 100%;
+    width: 260px;
+    object-fit: cover;
+    border-radius: 18px;
 }
 
 .popup-text {
-  padding: 2rem 1.5rem;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
+    padding: 2rem 1.5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
 }
 
 .popup-text h3 {
-  margin-top: 0;
-  color: var(--primary, #00ffd0);
-  font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--primary, #00ffd0);
+    font-size: 1.3rem;
 }
 
 .popup-close {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: var(--primary, #00ffd0);
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 2;
-  transition: color 0.2s;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--primary, #00ffd0);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s;
 }
 
 .popup-close:hover {
-  color: var(--accent, #ff00ea);
+    color: var(--accent, #ff00ea);
 }
 
+/* --- FOOTER --- */
 footer {
     background: #161922;
     color: var(--text-secondary);
@@ -493,6 +493,7 @@ footer p {
     color: var(--text-secondary);
 }
 
+/* --- RESPONSIVE --- */
 @media screen and (max-width: 1200px) {
     .container,
     .cards-container {
@@ -537,16 +538,16 @@ footer p {
 }
 
 @media (max-width: 600px) {
-  .popup-content {
-    flex-direction: column;
-    max-width: 96vw;
-    min-width: 0;
-  }
-  .popup-img {
-    width: 100%;
-    height: 160px;
-    border-radius: 18px 18px 0 0;
-  }
+    .popup-content {
+        flex-direction: column;
+        max-width: 96vw;
+        min-width: 0;
+    }
+    .popup-img {
+        width: 100%;
+        height: 160px;
+        border-radius: 18px 18px 0 0;
+    }
 }
 
 @media screen and (max-width: 430px) {
