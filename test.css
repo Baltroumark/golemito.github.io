@@ -193,7 +193,14 @@ body {
     gap: 2.2rem;
     align-items: center;
     background: var(--surface);
-    border-radius: var(--radius);
+    clip-path: polygon(
+            0% 0%,        /* haut gauche */
+            85% 0%,       /* haut droit (début du biseau) */
+            100% 15%,     /* coin supérieur droit biseauté */
+            100% 100%,    /* bas droit */
+            15% 100%,     /* bas gauche (début du biseau) */
+            0% 85%        /* coin inférieur gauche biseauté */
+    );
     box-shadow: var(--shadow);
     padding: 2.5rem 2rem;
 }
