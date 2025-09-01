@@ -188,21 +188,17 @@ body {
     padding: 4.5rem 0 3.5rem 0;
 }
 
-#presentation .container {
-    display: flex;
-    gap: 2.2rem;
-    align-items: center;
-    background: var(--surface);
+#presentation .container::before {
+    transition: clip-path 0.3s ease-in-out;
+}
+
+#presentation .container:hover::before {
     clip-path: polygon(
-            0% 0%,        /* haut gauche */
-            95% 0%,       /* haut droit (début du biseau) */
-            100% 15%,     /* coin supérieur droit biseauté */
-            100% 100%,    /* bas droit */
-            3% 100%,     /* bas gauche (début du biseau) */
-            0% 94%        /* coin inférieur gauche biseauté */
+            0% 0%,
+            100% 0%,
+            100% 100%,
+            0% 100%
     );
-    box-shadow: var(--shadow);
-    padding: 2.5rem 2rem;
 }
 
 #presentation img {
